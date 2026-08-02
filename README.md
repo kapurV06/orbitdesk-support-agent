@@ -18,7 +18,7 @@ START -> triage
                                                                    `-- fail, revision 1 -> safe_failure_node -> END
 ```
 
-See `diagram/graph_diagram.png` for the rendered diagram.
+See `diagram/workflow.png` for the rendered diagram.
 
 | Node | Responsibility | Model? |
 |---|---|---|
