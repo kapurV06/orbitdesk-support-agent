@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": null,
+    "question": "Can a read-only user create API credentials?",
+    "logs": [
+      "triage: classification=answerable top_score=0.574 reason='Retrieved evidence with sufficient similarity (top score 0.57).'",
+      "evidence: selected=['KB-005', 'CASE-1058', 'KB-002', 'KB-005'] excluded_superseded=[]",
+      "generation: demo hook stripped citations from first draft to force verification failure",
+      "generation: revision=0 latency=21.04s chars=135",
+      "verification: passed=False similarity=0.524 issues=['Answer does not cite any retrieved source_id.']",
+      "control: routing back to generation for revision #1",
+      "generation: revision=1 latency=20.83s chars=282",
+      "verification: passed=False similarity=0.559 issues=['Answer does not cite any retrieved source_id.']",
+      "safe_failure: verification failed twice, issues=['Answer does not cite any retrieved source_id.']"
+    ],
+    "final_output": {
+      "classification": "safe_failure",
+      "answer": "I wasn't able to produce a response I'm confident is fully supported by the available documentation. Rather than risk giving inaccurate guidance, please rephrase your question with more detail, or contact OrbitDesk support directly.",
+      "sources": [
+        {
+          "source_id": "KB-005",
+          "passage": "## Creating a Credential\n\nAn Owner or Admin can create a credential from **Settings > Developer > API credentials**. The secret is shown once at creation and cannot be revealed again. If the secret is"
+        },
+        {
+          "source_id": "CASE-1058",
+          "passage": "Title: Viewer could not create an API credential\nSymptoms:\n- User had the Viewer role\n- Developer settings were not visible\nResolution steps:\n- Confirmed that Viewers cannot create API credentials\n- A"
+        },
+        {
+          "source_id": "KB-002",
+          "passage": "## Permission Failures\n\nIf a user sees `permission_denied`, first identify their workspace role and the action they attempted. Do not recommend changing the user to Owner unless the action specificall"
+        },
+        {
+          "source_id": "KB-005",
+          "passage": "# API Credentials\n\nOrbitDesk uses workspace API credentials for server-to-server integrations. Only Owners and Admins can create or revoke credentials. Analysts and Viewers cannot create API credentia"
+        }
+      ],
+      "confidence": 0.0,
+      "requires_human": true,
+      "reason": "Verification failed after retry: Answer does not cite any retrieved source_id.",
+      "clarification_question": null,
+      "warnings": [
+        "Answer withheld after failing verification twice."
+      ]
+    },
+    "elapsed_s": 46.18
+  }
+]

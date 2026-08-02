@@ -1,0 +1,8 @@
+langgraph==0.2.60
+langchain-core==0.3.28
+transformers==4.46.3
+sentence-transformers==3.3.1
+torch
+jsonschema==4.23.0
+pytest==8.3.4
+numpy
